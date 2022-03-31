@@ -5,7 +5,7 @@ import { AccountsService } from '../accounts.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService]  //2
+  //providers: [LoggingService]  //2
 })
 export class AccountComponent {
   @Input() account: {name: string, status: string};
@@ -17,6 +17,6 @@ export class AccountComponent {
   onSetTo(status: string) {
     this.accountService.updateStatus(this.id, status);
     //console.log('A server status changed, new status: ' + status);
-    this.loggingService.logStatusChange(status); //4
+    //this.loggingService.logStatusChange(status); //4
   }
 }
