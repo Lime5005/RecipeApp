@@ -1,7 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable, EventEmitter  } from "@angular/core";
 import { LoggingService } from "./logging.service";
 
-@Injectable() //allow to be injected in by other services
+//@Injectable() //allow to be injected in by other services
+@Injectable({providedIn: 'root'})// Lazy loading (faster) compare to above
 export class AccountsService {
   accounts = [
     {
@@ -17,6 +18,8 @@ export class AccountsService {
       status: 'unknown'
     }
   ];
+
+  statusUpdated = new EventEmitter<string>();
 
   constructor(private loggingService: LoggingService) {}
 

@@ -35,7 +35,8 @@ import { LoggingService } from './logging.service';
     BrowserModule,
     FormsModule //very important to let the form submit work
   ],
-  providers: [AccountsService, LoggingService],
+  //providers: [AccountsService, LoggingService],
+  providers: [LoggingService], //AccountsService has been lazy loaded by @Injectable({providedIn: 'root'})
   bootstrap: [AppComponent]
 })
 export class AppModule { }
