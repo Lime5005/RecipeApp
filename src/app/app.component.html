@@ -1,4 +1,4 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!-- <app-header (featureSelected)="onNavigate($event)"></app-header> -->
 <div class="container">
     <div class="row">
         <!-- <div class="col-md-12">
@@ -6,9 +6,9 @@
             <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
         </div> -->
         <div class="col-xs-12 col-md-8 col-md-offset-2">
-            <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+            <app-new-account></app-new-account>
             <hr>
-            <app-account *ngFor="let acc of accounts; let i = index" [account]="acc" [id]="i" (statusChanged)="onStatusChanged($event)"></app-account>
+            <app-account *ngFor="let acc of accounts; let i = index" [account]="acc" [id]="i"></app-account>
         </div>
     </div>
 </div>
