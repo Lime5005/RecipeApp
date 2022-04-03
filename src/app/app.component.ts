@@ -9,11 +9,11 @@ import { AccountsService } from './accounts.service';
 })
 export class AppComponent implements OnInit {
 
-  // loadedFeature = 'recipe';
+  loadedFeature = 'recipe';
 
-  // onNavigate(feature: string) {
-  //   this.loadedFeature = feature;
-  // }
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 
   accounts: {name: string, status: string}[] = [];
 
